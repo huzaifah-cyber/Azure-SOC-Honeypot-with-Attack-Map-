@@ -14,21 +14,19 @@
 
 # Project Overview
 
-This project demonstrates the deployment of a cloud-based Security Operations Center (SOC) using Microsoft Azure. A deliberately exposed Windows 11 virtual machine was configured as a honeypot to attract real-world attackers and collect Windows Security Events generated through unauthorized Remote Desktop Protocol (RDP) login attempts.
+## Project Overview
 
-The collected security logs were forwarded to a centralized Log Analytics Workspace using the Azure Monitor Agent (AMA), where Microsoft Sentinel was configured as the Security Information and Event Management (SIEM) platform. Kusto Query Language (KQL) was then used to investigate authentication events, identify brute-force attacks, and enrich attacker IP addresses with geographic intelligence using a GeoIP watchlist.
+This project demonstrates the deployment of a cloud-based Security Operations Center (SOC) in Microsoft Azure. A Windows 11 virtual machine was intentionally exposed as a honeypot to collect real-world attack data, which was forwarded to Microsoft Sentinel for centralized monitoring and analysis.
 
-Finally, a Microsoft Sentinel Workbook was developed to visualize attack origins on an interactive world map. After observing real attack activity, the virtual machine was secured using multiple cloud security hardening techniques, including Windows Firewall, Network Security Group (NSG) hardening, Azure Role-Based Access Control (RBAC), and Microsoft Defender for Cloud.
+Using Kusto Query Language (KQL), failed authentication attempts were investigated, enriched with geographic intelligence through a GeoIP watchlist, and visualized on an interactive attack map. After analyzing the collected telemetry, the environment was secured using Azure security best practices, including Network Security Group (NSG) hardening, Windows Defender Firewall, Azure Role-Based Access Control (RBAC), and Microsoft Defender for Cloud.
 
 ---
 
 # The Problem This Solves
 
-The internet is continuously scanned by automated bots and threat actors searching for vulnerable systems. A newly deployed virtual machine with a public IP address can begin receiving attack attempts within minutes, regardless of whether anyone knows it exists.
+Internet-facing systems are continuously targeted by automated scanners and threat actors searching for vulnerable services. This project demonstrates how quickly an exposed virtual machine begins receiving real attack attempts and how Microsoft Sentinel can be used to collect, investigate, and visualize that activity.
 
-This project demonstrates that reality by intentionally deploying an exposed Windows honeypot in Microsoft Azure and monitoring real attack activity using Microsoft Sentinel. Rather than relying on simulated security events, every failed login attempt recorded in this environment originated from actual internet traffic targeting the virtual machine.
-
-By enriching security logs with geographic intelligence and visualizing attack sources on a live world map, this project provides valuable insight into the scale and persistence of internet-based attacks. The project concludes by applying Azure security best practices to reduce the virtual machine's attack surface and demonstrate how layered security controls improve an organization's overall security posture.
+By combining centralized logging, geographic enrichment, and cloud security hardening, the project showcases both the offensive reality of internet exposure and the defensive practices used to secure Azure workloads.
 
 ---
 <br>
