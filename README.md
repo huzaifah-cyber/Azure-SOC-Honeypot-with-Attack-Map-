@@ -12,8 +12,6 @@
 
 ---
 
-# Project Overview
-
 ## Project Overview
 
 This project demonstrates the deployment of a cloud-based Security Operations Center (SOC) in Microsoft Azure. A Windows 11 virtual machine was intentionally exposed as a honeypot to collect **real-world attack data**, which was forwarded to Microsoft Sentinel for centralized monitoring and analysis.
@@ -58,6 +56,8 @@ This project demonstrates the complete lifecycle of deploying, monitoring, inves
   - Enabling Microsoft Defender for Cloud
 
 </details>
+
+**[Click to skip to Attack Map](https://github.com/huzaifah-cyber/Azure-SOC-Honeypot-with-Attack-Map#build-and-analyze-the-attack-map)**
 
 # Technologies Used
 
